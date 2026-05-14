@@ -132,12 +132,6 @@ The customer logs into Usermin with their username and password to manage email,
 
 ---
 
-## Future: Domain Resale
-
-This extension is designed as a self-contained puzzle piece. When domain resale is added to Morén IT, implement it as a separate Paymenter extension (or gateway extension) that hooks into the domain checkout flow. No changes to this extension will be required.
-
----
-
 ## Notes
 
 - Virtualmin derives the Unix username from the domain name (first label, max 8 chars, alphanumeric only). The displayed username is computed client-side; if Virtualmin assigns a different username due to conflicts, update the `virtualmin_accounts` record manually or add a post-creation lookup.
