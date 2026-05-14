@@ -107,7 +107,7 @@ class VirtualminClient
         if ($status !== 'success') {
             // Prefer full_error over output — it contains the complete error message
             $errorDetail = $body['full_error'] ?? $body['error'] ?? $output;
-            Log::warning("Virtualmin API failure [{$program}]", [
+            Log::log($program === 'list-domains' ? 'debug' : 'warning', "Virtualmin API failure [{$program}]", [
                 'error'      => $body['error'] ?? '',
                 'full_error' => $body['full_error'] ?? '',
                 'output'     => $output,
